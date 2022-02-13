@@ -10,8 +10,63 @@ namespace _2proektC_tulusa
     {
         static void Main(string[] args)
         {
+            Random rnd = new Random();
+            int n = rnd.Next(1, 50);
+            int popitki = 5;
+            while (popitki<0)
+            {
+                Console.WriteLine("kakoe cislo?");
+                int a = Console.ReadLine();
+                if (a==n)
+                {
+                    Console.Write("vi ugadali, pozdravlau!");
+                    break;
+                }
+                else if (a!=n)
+                {
+                    Console.Write("poprobui ese");
+                    popitki -= 1;
+                }
+            }
+
+
+
+            Console.ReadKey();
+
+            //таблица умножения
+            /*int y = 0;
+            for (int i = 1; i <= 10; i++)
+            {
+                for (int j = 1; j <= 10; j++)
+                {
+                    y = i * j;
+                    Console.Write($"{y,4}");
+                }
+                Console.Write("\n");
+            }
+            Console.ReadKey();*/
+
+            //купи слона
+            /*string a = " ";
+            while (true)
+            {
+                Console.WriteLine("kupi slona");
+                a = Console.ReadLine();
+                if (a.ToLower() == "slon") 
+                {
+                    Console.Write("slon tvoi");
+                    break;
+                }
+                else
+                {
+
+                }
+            }*/
+            //Console.ReadKey();
+
+
             //Console.OutputEncoding = Encoding.UTF8; чтобы программа понимала на русском
-            int[] arvud = new int[5];
+            /*int[] arvud = new int[5];
             int a=0;
             int k=0;
             do
@@ -40,7 +95,7 @@ namespace _2proektC_tulusa
             }
             Console.WriteLine($"summa={summa}, korrutis={korr}, aritmeetiline keskmine={arit,4}");
 
-            Console.ReadKey();
+            Console.ReadKey();*/
             /*Random rnd = new Random();
             int N = rnd.Next(1, 50);
             int M = rnd.Next(1, 50);

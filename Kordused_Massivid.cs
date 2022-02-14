@@ -5,18 +5,57 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace _2proektC_tulusa
-{
+{//Console.OutputEncoding = Encoding.UTF8; - чтобы программа понимала на русском
     class Kordused_Massivid
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
+            int arv_1 = 0;
+            int arv_2 = 0;
+            string tehe = " ";
+            Console.WriteLine("Sisestage esimene arv:");
+            arv_1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sisestage teine arv:");
+            arv_2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sisestage tehe:");
+
+
+            int a = 0;
+            int b = 0;
+            Console.WriteLine("vvedite pervoe cislo");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("vvedite vtoroe cislo");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine(Funktsionid.Srednee(a, b));
+
+            Console.ReadKey();
+            /*int q = 6;
+            Console.WriteLine(Funktsionid.Korrutamine(3,q));
+
+            Array neliarvud;
+            neliarvud = Funktsionid.Massiv(4,true);
+            Array.Sort(neliarvud);
+            //Array.Reverse(neliarvud);
+            //var arv0="";
+            int arv1 = 0;
+            int j = 0;
+            foreach (int n in neliarvud)
+            {
+                //arv += n.ToString();
+                arv1 = (int) (arv1 + n * Math.Pow(10,j));
+                j++;
+            }
+            Console.WriteLine(arv1);
+            Console.ReadKey();*/
+
+            //random cisla
+            /*Random rnd = new Random();
             int n = rnd.Next(1, 50);
             int popitki = 5;
             while (popitki<0)
             {
                 Console.WriteLine("kakoe cislo?");
-                int a = Console.ReadLine();
+                int a = int.Parse(Console.ReadLine());
                 if (a==n)
                 {
                     Console.Write("vi ugadali, pozdravlau!");
@@ -29,9 +68,8 @@ namespace _2proektC_tulusa
                 }
             }
 
+            Console.ReadKey();*/
 
-
-            Console.ReadKey();
 
             //таблица умножения
             /*int y = 0;
@@ -66,7 +104,10 @@ namespace _2proektC_tulusa
 
 
             //Console.OutputEncoding = Encoding.UTF8; чтобы программа понимала на русском
-            /*int[] arvud = new int[5];
+            /*
+            Array arvud;
+            arvud = Funktsionid.Massiv(5);
+            //int[] arvud = new int[5];
             int a=0;
             int k=0;
             do
@@ -108,11 +149,11 @@ namespace _2proektC_tulusa
                 M = abi;
             }
             int[] N_M = new int[M - N + 1];
-            int j = 0;
+            int k = 0;
             for (int i = N; i < M; i++)
             {
                 N_M[j]= i;
-                j++;
+                k++;
             }
             foreach (var n_m in N_M)
             {
@@ -130,11 +171,9 @@ namespace _2proektC_tulusa
             }
             Console.WriteLine();
 
-            int[] arvud = new int[10];
-            for (int i = 0; i < arvud.Length; i++)
-            {
-                arvud[i] = rnd.Next(5, 500);
-            }
+            Array arvud;
+            arvud = Funktsionid.Massiv(10, false);
+            Funktsionid.Massiv_ekraanile(arvud);
             foreach (int arv in arvud)
             {
                 Console.Write($"{arv,4}");

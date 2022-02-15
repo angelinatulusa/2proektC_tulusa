@@ -10,25 +10,49 @@ namespace _2proektC_tulusa
     {
         static void Main(string[] args)
         {
-            int arv_1 = 0;
+            //3 cisla
+            int kolvo_1 = 0;
+            int kolvo_2 = 0;
+            int kolvo_3 = 0;
+            Console.WriteLine("nazovite pervoe cislo");
+            kolvo_1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("nazovite vtoroe cislo");
+            kolvo_2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("nazovite tretje cislo");
+            kolvo_3 = int.Parse(Console.ReadLine());
+            Console.Write(Funktsionid.Star(kolvo_1));
+            Console.Write(Funktsionid.Star(kolvo_2));
+            Console.Write(Funktsionid.Star(kolvo_3));
+
+            //kolvo *
+            /*int kolvo = 0;
+            Console.WriteLine("slolko * vi hotite?");
+            kolvo=int.Parse(Console.ReadLine());
+            for (int i = 0; i < kolvo; i++)
+            {
+                Console.Write("*");
+            }*/
+
+            //nurr
+            /*int arv_1 = 0;
             int arv_2 = 0;
-            string tehe = " ";
+            string tehe = "";
             Console.WriteLine("Sisestage esimene arv:");
             arv_1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Sisestage teine arv:");
             arv_2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Sisestage tehe:");
+            tehe=Console.ReadLine();
+            Console.WriteLine(Funktsionid.Nurr(arv_1, arv_2, tehe));*/
 
-
-            int a = 0;
+            /*int a = 0;
             int b = 0;
             Console.WriteLine("vvedite pervoe cislo");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine("vvedite vtoroe cislo");
             b = int.Parse(Console.ReadLine());
-            Console.WriteLine(Funktsionid.Srednee(a, b));
+            Console.WriteLine(Funktsionid.Srednee(a, b));*/
 
-            Console.ReadKey();
             /*int q = 6;
             Console.WriteLine(Funktsionid.Korrutamine(3,q));
 
@@ -192,6 +216,7 @@ namespace _2proektC_tulusa
             }
 
             Console.ReadLine();*/
+            Console.ReadKey();
         }
     }
 }

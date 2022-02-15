@@ -49,12 +49,35 @@ namespace _2proektC_tulusa
             arit = summa / 2;
             return arit;
         }
-        public static void Nurr(int arv1, int arv2, string t)
+        public static string Nurr(int arv1, int arv2, string t)
         {
-            if (t=="+")
+            int a = 0;
+            if (t == "+")
             {
-
+                a = arv1 + arv2;
+                for (int i = 0; i < a; i++)
+                {
+                    Console.Write("nurr ");
+                }
             }
+            else if (t == "*") 
+            {
+                a = arv1 * arv2;
+                for (int i = 0; i < a; i++)
+                {
+                    Console.Write("nurr ");
+                }
+            }
+            return t;
         }
+        public static int Star(int a)
+        {
+            for (int i = 0; i < a; i++)
+            {
+                Console.Write("*");
+            }
+            return a;
+        }
+
     }
 }

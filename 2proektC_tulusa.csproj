@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Funktsionid.cs" />
+    <Compile Include="inimene.cs" />
     <Compile Include="Kordused_Massivid.cs" />
+    <Compile Include="loendid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

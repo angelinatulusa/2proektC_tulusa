@@ -10,6 +10,82 @@ namespace _2proektC_tulusa
     {
         static void Main(string[] args)
         {
+            //4 ülesanne
+            Random rnd = new Random();
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            List<string> strana = new List<string> { "Estonia", "Tartu"};
+            List<string> maakond = new List<string> { "Põhja-Tallinn", "Tartu maakond"};
+            bool wantTo = true;
+            int randInt = 0;
+            double score = 0;
+
+            for (int i = 0; i < strana.Count; i++)
+            {
+                dict.Add(strana[i], maakond[i]);
+                dict.Add(maakond[i], strana[i]);
+            }
+            while (wantTo == true)
+            {
+
+                Console.WriteLine("Search capital/country - 1, test - 2");
+                int answer = int.Parse(Console.ReadLine());
+                if (answer == 1)
+                {
+                    Console.Write("Entry capital/country: ");
+                    string input = Console.ReadLine();
+                    if (dict.ContainsKey(input))
+                    {
+                        Console.WriteLine("Pair of " + input + " is " + dict[input]);
+                    }
+                    else if (!dict.ContainsKey(input))
+                    {
+                        Console.WriteLine("do you want to add new words? yes - 1, no - 2");
+                        answer = int.Parse(Console.ReadLine());
+                        if (answer == 1)
+                        {
+                            Console.WriteLine("Enter new country please");
+                            string new1 = Console.ReadLine();
+
+                            Console.WriteLine("Enter new capital please");
+                            string new2 = Console.ReadLine();
+                            dict.Add(new1, new2);
+                            dict.Add(new2, new1);
+                        }
+                    }
+                }
+                else if (answer == 2)
+                {
+                    score = 0;
+                    for (int i = 0; i < strana.Count; i++)
+                    {
+                        randInt = rnd.Next(1, 3);
+                        int b = rnd.Next(1, strana.Count);
+                        if (randInt == 1)
+                        {
+                            Console.WriteLine("This is - " + strana[b]);
+                            string userInput = Console.ReadLine();
+                            if (maakond.IndexOf(userInput) == strana.IndexOf(strana[b]))
+                            {
+                                Console.WriteLine("Yes!");
+                                score++;
+                            }
+                        }
+                        else if (randInt == 2)
+                        {
+                            Console.WriteLine("This is - " + maakond[b]);
+                            string userInput = Console.ReadLine();
+                            if (strana.IndexOf(userInput) == maakond.IndexOf(maakond[b]))
+                            {
+                                Console.WriteLine("Yes!");
+                                score++;
+                            }
+                        }
+                    }
+                    Console.WriteLine(score / strana.Count * 100 + "%");
+                }
+
+            }
             //1 ülesanne
             List<int> alguses = new List<int>();
             List<int> lopus = new List<int>();

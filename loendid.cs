@@ -28,26 +28,26 @@ namespace _2proektC_tulusa
             while (wantTo == true)
             {
 
-                Console.WriteLine("Search capital/country - 1, test - 2");
+                Console.WriteLine("Otsi linn/maakond - 1, test - 2");
                 int answer = int.Parse(Console.ReadLine());
                 if (answer == 1)
                 {
-                    Console.Write("Entry capital/country: ");
+                    Console.Write("Kirjuta linn/maakond: ");
                     string input = Console.ReadLine();
                     if (dict.ContainsKey(input))
                     {
-                        Console.WriteLine("Pair of " + input + " is " + dict[input]);
+                        Console.WriteLine("Paar " + input + " on " + dict[input]);
                     }
                     else if (!dict.ContainsKey(input))
                     {
-                        Console.WriteLine("do you want to add new words? yes - 1, no - 2");
+                        Console.WriteLine("Kas sa tahad lisama uued sõnad? jah - 1, ei - 2");
                         answer = int.Parse(Console.ReadLine());
                         if (answer == 1)
                         {
-                            Console.WriteLine("Enter new country please");
+                            Console.WriteLine("Kirjuta uus maakond");
                             string new1 = Console.ReadLine();
 
-                            Console.WriteLine("Enter new capital please");
+                            Console.WriteLine("Kirjuta uus linn");
                             string new2 = Console.ReadLine();
                             dict.Add(new1, new2);
                             dict.Add(new2, new1);
@@ -63,21 +63,21 @@ namespace _2proektC_tulusa
                         int b = rnd.Next(1, strana.Count);
                         if (randInt == 1)
                         {
-                            Console.WriteLine("This is - " + strana[b]);
+                            Console.WriteLine("See on - " + strana[b]);
                             string userInput = Console.ReadLine();
                             if (maakond.IndexOf(userInput) == strana.IndexOf(strana[b]))
                             {
-                                Console.WriteLine("Yes!");
+                                Console.WriteLine("Jah!");
                                 score++;
                             }
                         }
                         else if (randInt == 2)
                         {
-                            Console.WriteLine("This is - " + maakond[b]);
+                            Console.WriteLine("See on - " + maakond[b]);
                             string userInput = Console.ReadLine();
                             if (strana.IndexOf(userInput) == maakond.IndexOf(maakond[b]))
                             {
-                                Console.WriteLine("Yes!");
+                                Console.WriteLine("Jah!");
                                 score++;
                             }
                         }

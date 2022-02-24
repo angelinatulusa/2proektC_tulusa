@@ -56,7 +56,7 @@ namespace _2proektC_tulusa
                 }
                 else if (answer == 2)
                 {
-                    score = 0;
+                    scet = 0;
                     for (int i = 0; i < strana.Count; i++)
                     {
                         randInt = rnd.Next(1, 3);
@@ -68,7 +68,7 @@ namespace _2proektC_tulusa
                             if (maakond.IndexOf(userInput) == strana.IndexOf(strana[b]))
                             {
                                 Console.WriteLine("Jah!");
-                                score++;
+                                scet++;
                             }
                         }
                         else if (randInt == 2)
@@ -78,11 +78,11 @@ namespace _2proektC_tulusa
                             if (strana.IndexOf(userInput) == maakond.IndexOf(maakond[b]))
                             {
                                 Console.WriteLine("Jah!");
-                                score++;
+                                scet++;
                             }
                         }
                     }
-                    Console.WriteLine(score / strana.Count * 100 + "%");
+                    Console.WriteLine(scet / strana.Count * 100 + "%");
                 }
 
             }
